@@ -9,7 +9,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	/*private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
 
@@ -28,7 +28,7 @@ public partial class MainPage : ContentPage
 			huso.Text = "Hallo";
 		}
     }
-    /*void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+    void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
     {
         double value = args.NewValue;
         rotatingLabel.Rotation = value;
