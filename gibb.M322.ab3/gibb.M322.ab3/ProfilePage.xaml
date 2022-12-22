@@ -22,6 +22,10 @@
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
+                            <SearchBar
+                                HorizontalOptions="Center"
+                                Placeholder="Search for a show..."
+                                HeightRequest="8"/>
                             <Button
                             HorizontalOptions="Start"
                             VerticalOptions="Center"

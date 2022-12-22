@@ -1,10 +1,10 @@
 namespace gibb.M322.ab3;
 
-public partial class NewPage1 : ContentPage
+public partial class RatingPage : ContentPage
 {
-	public NewPage1()
+	public RatingPage()
 	{
-		InitializeComponent();
+        InitializeComponent();
 	}
 
     private void OnSettingsButtonClicked(object sender, EventArgs e)
@@ -13,5 +13,4 @@ public partial class NewPage1 : ContentPage
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
 
     }
-
 }

@@ -16,6 +16,13 @@ public partial class MainPage : ContentPage
 
     }
 
+    private void ToBlackClover(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new RatingPage(), true);
+        Routing.RegisterRoute(nameof(RatingPage), typeof(RatingPage));
+
+    }
+
     /*private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
