@@ -16,8 +16,8 @@
                     <StackLayout HeightRequest="80"
                                  VerticalOptions="Center">
                         <Grid
-                           VerticalOptions="Center">
-                            <ImageButton Source="fy.png"
+                          VerticalOptions="Center">
+                          <ImageButton Source="fy.png"
                            HeightRequest="60"
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"

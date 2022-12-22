@@ -39,18 +39,20 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
-            <Image Source="bastard.png" 
-                   MaximumHeightRequest="90"
+            <Grid>
+            <ImageButton Source="black_clover.jpg" 
+                   MaximumHeightRequest="400"
                    HorizontalOptions="Start"
                    VerticalOptions="Start"/>
-            <Image Source="bastard.png"
-                   MaximumHeightRequest="90"
+            <ImageButton Source="naruto.jpg"
+                   MaximumHeightRequest="400"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"/>
-            <Image Source="bastard.png"
-                   MaximumHeightRequest="90"
+            <ImageButton Source="saiki.png"
+                   MaximumHeightRequest="400"
                    HorizontalOptions="End"
                    VerticalOptions="Start"/>
+            </Grid>
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
