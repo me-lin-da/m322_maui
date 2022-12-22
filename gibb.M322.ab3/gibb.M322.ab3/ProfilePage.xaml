@@ -1,9 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gibb.M322.ab3.MainPage"
-             Title="">
-
+             x:Class="gibb.M322.ab3.NewPage1"
+             Title="NewPage1">
     <ScrollView
              BackgroundColor="#383138">
         <VerticalStackLayout
@@ -12,24 +11,22 @@
             VerticalOptions="CenterAndExpand">
             <ListView
                 BackgroundColor="#110011"
-                HeightRequest="80"
-                VerticalOptions="Center"
                 MaximumHeightRequest="150">
                 <ListView.Header>
-                    <StackLayout HeightRequest="60"
+                    <StackLayout HeightRequest="80"
                                  VerticalOptions="Center">
                         <Grid
                            VerticalOptions="Center">
-                        <ImageButton Source="fy.png"
+                            <ImageButton Source="fy.png"
                            HeightRequest="60"
-                           Clicked="OnSettingsButtonClicked"
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"
-                           Margin="20"/>    
-                        <Button
+                           Margin="20"/>
+                            <Button
                             HorizontalOptions="Start"
                             VerticalOptions="Center"
                             FontFamily="Ubuntu"
+                            Clicked="OnSettingsButtonClicked"
                             Margin="20"
                             TextColor="#c6c6c6"
                             BackgroundColor="#110011"
@@ -39,18 +36,7 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
-            <Image Source="bastard.png" 
-                   MaximumHeightRequest="90"
-                   HorizontalOptions="Start"
-                   VerticalOptions="Start"/>
-            <Image Source="bastard.png"
-                   MaximumHeightRequest="90"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start"/>
-            <Image Source="bastard.png"
-                   MaximumHeightRequest="90"
-                   HorizontalOptions="End"
-                   VerticalOptions="Start"/>
+            
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
@@ -64,5 +50,4 @@
             </ListView>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

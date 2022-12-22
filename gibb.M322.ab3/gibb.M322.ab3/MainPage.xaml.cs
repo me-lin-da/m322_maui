@@ -9,7 +9,14 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	/*private void OnCounterClicked(object sender, EventArgs e)
+    private void OnSettingsButtonClicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new NewPage1(), true);
+        Routing.RegisterRoute(nameof(NewPage1), typeof(NewPage1));
+
+    }
+
+    /*private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
 
@@ -34,6 +41,6 @@ public partial class MainPage : ContentPage
         rotatingLabel.Rotation = value;
         displayLabel.Text = String.Format("The Slider value is {0}", value);
     }*/
-   
+
 }
 
