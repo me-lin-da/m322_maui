@@ -5,7 +5,8 @@ public partial class RatingPage : ContentPage
 	public RatingPage()
 	{
         InitializeComponent();
-	}
+
+    }
 
     private void OnSettingsButtonClicked(object sender, EventArgs e)
     {
@@ -13,4 +14,6 @@ public partial class RatingPage : ContentPage
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
 
     }
+
+   
 }
