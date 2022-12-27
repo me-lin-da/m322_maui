@@ -22,10 +22,14 @@
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
-                            <SearchBar
-                                HorizontalOptions="Center"
-                                Placeholder="Search for a show..."
-                                HeightRequest="8"/>
+                            <Entry x:Name="entry"
+                                BackgroundColor="#110011"
+                                 TextColor="#c6c6c6"
+                                 Placeholder="Search for a show..."
+                                 TextChanged="OnEntryTextChanged"
+                                 Completed="OnEntryCompleted" 
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
                             <Button
                             HorizontalOptions="Start"
                             VerticalOptions="Center"
