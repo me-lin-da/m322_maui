@@ -17,7 +17,7 @@
                                  VerticalOptions="Center">
                         <Grid
                           VerticalOptions="Center">
-                          <ImageButton Source="fy.png"
+                            <ImageButton Source="fy.png"
                            HeightRequest="60"
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"
@@ -45,23 +45,33 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
-            <Label Text="Admin"
-                   TextColor="#c893f2"
-                   FontFamily="Ubuntu"
-                   FontSize="40"
-                   HorizontalOptions="Center"/>
             <Grid>
-                <Image Source="fy.png"
-                           HeightRequest="200"
-                           HorizontalOptions="Start"
-                           VerticalOptions="CenterAndExpand"
-                           Margin="20"/>
                 <Label Text="Admin"
                    TextColor="#c893f2"
                    FontFamily="Ubuntu"
                    FontSize="40"
                    HorizontalOptions="Center"/>
-                
+                <Image Source="fy.png"
+                           HeightRequest="200"
+                           HorizontalOptions="Start"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="20"/>
+                <Label Text="Are you over 18?"
+                   TextColor="#c6c6c6"
+                   FontFamily="Ubuntu"
+                   FontSize="17"
+                       VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+                <Switch IsToggled="false"
+                        HorizontalOptions="End"
+                        ThumbColor="#c893f2"
+                        OnColor="#933fd6"/>
+                <Button Text="edit profile"
+                        FontFamily="Ubuntu"
+                        BackgroundColor="#933fd6"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        TextColor="#c6c6c6"/>
             </Grid>
             <ListView
                 BackgroundColor="#110011"
