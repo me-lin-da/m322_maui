@@ -28,6 +28,7 @@
                            Margin="20"/>
                             <Entry x:Name="entry"
                                 BackgroundColor="#110011"
+                                 FontFamily="Ubuntu"
                                  TextColor="#c6c6c6"
                                  Placeholder="Search for a show..."
                                  TextChanged="OnEntryTextChanged"
@@ -48,9 +49,10 @@
                 </ListView.Header>
             </ListView>
             <Label Text="Top rated this month"
-                               TextColor="#933fd6"
-                               FontFamily="Ubuntu"
-                               FontSize="40"/>
+                   TextColor="#c893f2"
+                   FontFamily="Ubuntu"
+                   FontSize="40"
+                   HorizontalOptions="Center"/>
             <Grid>
             <ImageButton Source="black_clover.jpg" 
                    Clicked="ToBlackClover"

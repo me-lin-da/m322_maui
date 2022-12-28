@@ -24,4 +24,10 @@ public partial class RatingPage : ContentPage
     {
         string text = ((Entry)sender).Text;
     }
+    private void OnSettingsToProfile(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new NewPage1(), true);
+        Routing.RegisterRoute(nameof(NewPage1), typeof(NewPage1));
+
+    }
 }

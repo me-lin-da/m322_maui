@@ -23,6 +23,7 @@
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
                             <Entry x:Name="entry"
+                                 FontFamily="Ubuntu"
                                 BackgroundColor="#110011"
                                  TextColor="#c6c6c6"
                                  Placeholder="Search for a show..."
@@ -44,7 +45,24 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
-            
+            <Label Text="Admin"
+                   TextColor="#c893f2"
+                   FontFamily="Ubuntu"
+                   FontSize="40"
+                   HorizontalOptions="Center"/>
+            <Grid>
+                <Image Source="fy.png"
+                           HeightRequest="200"
+                           HorizontalOptions="Start"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="20"/>
+                <Label Text="Admin"
+                   TextColor="#c893f2"
+                   FontFamily="Ubuntu"
+                   FontSize="40"
+                   HorizontalOptions="Center"/>
+                
+            </Grid>
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
