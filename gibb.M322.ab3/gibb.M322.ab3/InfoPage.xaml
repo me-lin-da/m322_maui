@@ -1,11 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gibb.M322.ab3.MainPage"
-             Title="">
-
-    <ScrollView
-             BackgroundColor="#383138">
+             x:Class="gibb.M322.ab3.InfoPage"
+             Title="InfoPage">
+    <ScrollView BackgroundColor="#383138">
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
@@ -20,7 +18,7 @@
                                  VerticalOptions="Center">
                         <Grid
                            VerticalOptions="Center">
-                        <ImageButton Source="fy.png"
+                            <ImageButton Source="fy.png"
                            HeightRequest="60"
                            Clicked="OnSettingsButtonClicked"
                            HorizontalOptions="End"
@@ -40,6 +38,7 @@
                             VerticalOptions="Center"
                             FontFamily="Ubuntu"
                             Margin="20"
+                            Clicked="OnBackClick"
                             TextColor="#c6c6c6"
                             BackgroundColor="#110011"
                             Text="←"
@@ -48,26 +47,6 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
-            <Label Text="Top rated this month"
-                   TextColor="#c893f2"
-                   FontFamily="Ubuntu"
-                   FontSize="40"
-                   HorizontalOptions="Center"/>
-            <Grid>
-            <ImageButton Source="black_clover.jpg" 
-                   Clicked="ToBlackClover"
-                   MaximumHeightRequest="400"
-                   HorizontalOptions="Start"
-                   VerticalOptions="Start"/>
-            <ImageButton Source="naruto.jpg"
-                   MaximumHeightRequest="400"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start"/>
-            <ImageButton Source="saiki.png"
-                   MaximumHeightRequest="400"
-                   HorizontalOptions="End"
-                   VerticalOptions="Start"/>
-            </Grid>
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
@@ -76,7 +55,6 @@
                         <Button Text="ⓘ"
                                 TextColor="#933fd6"
                                 FontSize="30"
-                                Clicked="OnInfoClicked"
                                 BackgroundColor="#110011"
                                 HorizontalOptions="End"/>
                         <Image Source="logo.png"
@@ -85,10 +63,9 @@
                            VerticalOptions="Center"
                            Margin="20"/>
                     </Grid>
-                   
+
                 </ListView.Header>
             </ListView>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
