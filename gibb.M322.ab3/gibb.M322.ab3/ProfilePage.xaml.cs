@@ -24,4 +24,5 @@ public partial class NewPage1 : ContentPage
         string text = ((Entry)sender).Text;
     }
 
+
 }

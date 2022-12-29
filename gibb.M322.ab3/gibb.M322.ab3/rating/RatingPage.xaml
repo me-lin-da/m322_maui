@@ -125,6 +125,8 @@
             <Button Text="add review"
                     TextColor="#c6c6c6"
                     FontFamily="Ubuntu"
+                    Clicked="OnAlertYesNoClicked"
+                    ClassId="1"
                     BackgroundColor="#933fd6"/>
             <ListView
                 BackgroundColor="#110011"

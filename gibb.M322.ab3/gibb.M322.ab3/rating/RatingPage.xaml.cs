@@ -1,9 +1,12 @@
+using Microsoft.UI.Xaml.Media;
+using System.Diagnostics;
+
 namespace gibb.M322.ab3;
 
 public partial class RatingPage : ContentPage
 {
-	public RatingPage()
-	{
+    public RatingPage()
+    {
         InitializeComponent();
 
     }
@@ -30,4 +33,10 @@ public partial class RatingPage : ContentPage
         Routing.RegisterRoute(nameof(NewPage1), typeof(NewPage1));
 
     }
+    async void OnAlertYesNoClicked(object sender, EventArgs e)
+    {
+        bool answer = await DisplayAlert("Question?", "Would you like to play a game", "Yes", "No");
+        Debug.WriteLine("Answer: " + answer);
+    }
+
 }
