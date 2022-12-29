@@ -35,8 +35,14 @@ public partial class RatingPage : ContentPage
     }
     async void OnAlertYesNoClicked(object sender, EventArgs e)
     {
-        bool answer = await DisplayAlert("Question?", "Would you like to play a game", "Yes", "No");
-        Debug.WriteLine("Answer: " + answer);
+        bool accept = await DisplayAlert("Thank you for your review", "Your review will be checked and posted within the next 24h", "Ok","Cancel");
+        Debug.WriteLine("Answer: " + accept);
+        if(accept == true)
+        {
+            Application.Current.MainPage.Navigation.PushModalAsync(new RatingPage(), true);
+            Routing.RegisterRoute(nameof(RatingPage), typeof(RatingPage));
+        }
+        
     }
 
 }
