@@ -52,10 +52,9 @@
                    FontFamily="Ubuntu"
                    FontSize="40"
                    HorizontalOptions="Center"/>
-            <Grid>
-                <TableView Intent="Menu"
-                           HorizontalOptions="Center">
-                    <TableRoot>
+            <TableView Intent="Menu"
+                       HorizontalOptions="Center">
+                <TableRoot>
                         <TableSection Title="On this page you will find all important information concerning this app."
                                       TextColor="#c6c6c6">
                             <ImageCell Text="1. Disclaimer"
@@ -70,7 +69,18 @@
                         </TableSection>
                     </TableRoot>
                 </TableView>
-            </Grid>
+
+            <Label Text="
+                   
+                   You still have some questions for us? No problem! Go to our FAQ page and ask your question there:"
+                   TextColor="#c6c6c6"
+                   FontSize="17"
+                   FontFamily="Ubuntu"/>
+            <Button Text="To FAQ page"
+                                TextColor="#c6c6c6"
+                                FontSize="17"
+                                BackgroundColor="#383138"
+                                HorizontalOptions="Center"/>
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
