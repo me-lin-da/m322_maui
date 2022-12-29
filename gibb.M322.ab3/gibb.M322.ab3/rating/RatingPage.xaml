@@ -83,7 +83,7 @@
                         HorizontalOptions="Center"
                         FontSize="17"
                     TextColor="#c6c6c6"
-        Title="Your rating:">
+        Title="Your watching status:">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Plan to watch</x:String>
@@ -115,23 +115,32 @@
                 </Picker>
 
             </Grid>
-            <Entry x:Name="entry"
+            <Grid>
+                <Image Source="fy.png"
+                       HorizontalOptions="Start"
+                       HeightRequest="60"
+                       VerticalOptions="Start"/>
+                <Entry x:Name="entry"
                    FontFamily="Ubuntu"                   
                    BackgroundColor="#110011"
                    TextColor="#c6c6c6"
-                    Placeholder="Enter text"
+                   Margin="60,0,0,0"
+                   HeightRequest="150"
+                    Placeholder="Enter review"
                     TextChanged="OnEntryTextChanged"
                     Completed="OnEntryCompleted" />
+            </Grid>
             <Button Text="add review"
                     TextColor="#c6c6c6"
                     FontFamily="Ubuntu"
+                    HorizontalOptions="Center"
                     Clicked="OnAlertYesNoClicked"
                     BackgroundColor="#933fd6"/>
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
                 <ListView.Header>
-                    <Image Source="bastard.png"
+                    <Image Source="logo.png"
                            HeightRequest="50"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"

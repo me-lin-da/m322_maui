@@ -72,7 +72,7 @@
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
                 <ListView.Header>
-                    <Image Source="bastard.png"
+                    <Image Source="logo.png"
                            HeightRequest="50"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"
