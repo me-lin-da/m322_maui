@@ -44,5 +44,11 @@ public partial class RatingPage : ContentPage
         }
         
     }
+    void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+    {
+        double value = args.NewValue;
+        slider.Value = value;
+        displayLabel.Text = String.Format("The Slider value is {0}", value);
+    }
 
 }

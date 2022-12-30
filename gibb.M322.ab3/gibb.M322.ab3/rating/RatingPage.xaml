@@ -92,28 +92,16 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Picker x:Name="picker"
-                    FontFamily="Ubuntu"
-                        HorizontalOptions="Start"
-                        FontSize="17"
-                    TextColor="#c6c6c6"
-        Title="Your rating:">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>1</x:String>
-                            <x:String>2</x:String>
-                            <x:String>3</x:String>
-                            <x:String>4</x:String>
-                            <x:String>5</x:String>
-                            <x:String>6</x:String>
-                            <x:String>7</x:String>
-                            <x:String>8</x:String>
-                            <x:String>9</x:String>
-                            <x:String>10</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-
+                <Label x:Name="displayLabel"
+               Text="(your rating:)"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+                <Slider x:Name="slider"
+                        Margin="0,0,800,0"
+                        VerticalOptions="End"
+                    Maximum="10"
+                    Minimum="1"
+                    ValueChanged="OnSliderValueChanged" />
             </Grid>
             <Grid>
                 <Image Source="fy.png"
