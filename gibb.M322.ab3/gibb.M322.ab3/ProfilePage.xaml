@@ -46,33 +46,49 @@
                 </ListView.Header>
             </ListView>
             <Grid>
-                <Label Text="Admin"
-                   TextColor="#c893f2"
-                   FontFamily="Ubuntu"
-                   FontSize="40"
-                   HorizontalOptions="Center"/>
+                <Image Source="userinfo.png"
+                       HorizontalOptions="Center"
+                       HeightRequest="300"/>
                 <Image Source="fy.png"
                            HeightRequest="200"
                            HorizontalOptions="Start"
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
-                <Label Text="Are you over 18?"
+            </Grid>
+            <Label Text="Email: Admin@Admin.ch"
                    TextColor="#c6c6c6"
                    FontFamily="Ubuntu"
                    FontSize="17"
-                       VerticalOptions="Center"
+                       VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label Text="Average rating: 7.5"
+                   TextColor="#c6c6c6"
+                   FontFamily="Ubuntu"
+                   FontSize="17"
+                       VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Are you over 18?"
+                   TextColor="#c6c6c6"
+                   FontFamily="Ubuntu"
+                   FontSize="17"
+                       VerticalOptions="Start"
                    HorizontalOptions="Center"/>
                 <Switch IsToggled="false"
-                        HorizontalOptions="End"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
                         ThumbColor="#c893f2"
                         OnColor="#933fd6"/>
+                
+                <CheckBox IsChecked="true" 
+                          HorizontalOptions="Center"/>
+
                 <Button Text="edit profile"
                         FontFamily="Ubuntu"
                         BackgroundColor="#933fd6"
                         HorizontalOptions="Center"
                         VerticalOptions="End"
                         TextColor="#c6c6c6"/>
-            </Grid>
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
