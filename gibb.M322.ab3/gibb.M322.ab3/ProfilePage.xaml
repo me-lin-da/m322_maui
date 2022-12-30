@@ -55,33 +55,34 @@
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
             </Grid>
-            <Label Text="Email: Admin@Admin.ch"
+            <Label Text="Please verify your account: "
+                   TextColor="#c893f2"
+                   FontFamily="Ubuntu"
+                   FontSize="25"
+                       VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Grid>
+                <Label Text="are you over 18?"
                    TextColor="#c6c6c6"
                    FontFamily="Ubuntu"
                    FontSize="17"
-                       VerticalOptions="Start"
                    HorizontalOptions="Center"/>
-            <Label Text="Average rating: 7.5"
-                   TextColor="#c6c6c6"
-                   FontFamily="Ubuntu"
-                   FontSize="17"
-                       VerticalOptions="Start"
-                   HorizontalOptions="Center"/>
-
-            <Label Text="Are you over 18?"
-                   TextColor="#c6c6c6"
-                   FontFamily="Ubuntu"
-                   FontSize="17"
-                       VerticalOptions="Start"
-                   HorizontalOptions="Center"/>
-                <Switch IsToggled="false"
-                        HorizontalOptions="Center"
-                        VerticalOptions="End"
+            <Switch IsToggled="false"
+                        HorizontalOptions="End"
                         ThumbColor="#c893f2"
                         OnColor="#933fd6"/>
-                
+            </Grid>
+            <Grid>
+                <Label Text="I'm ok that everyone will be able to see my reviews: "
+                   TextColor="#c6c6c6"
+                   FontFamily="Ubuntu"
+                   FontSize="17"
+                   HorizontalOptions="Center"/>
                 <CheckBox IsChecked="true" 
-                          HorizontalOptions="Center"/>
+                          HorizontalOptions="End"
+                          BackgroundColor="#933fd6"/>
+            </Grid>
+      
 
                 <Button Text="edit profile"
                         FontFamily="Ubuntu"
