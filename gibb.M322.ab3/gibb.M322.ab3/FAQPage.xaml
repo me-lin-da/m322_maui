@@ -48,6 +48,11 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
+            <Label Text="FAQ"
+                   TextColor="#c893f2"
+                   FontFamily="Ubuntu"
+                   FontSize="40"
+                   HorizontalOptions="Center"/>
             <Grid>
                 <Image Source="fy.png"
                        HorizontalOptions="Start"
@@ -57,11 +62,13 @@
                       Margin="60,0,0,0">
                     <Label Text="I'm a bit confused on why the posts arent poster righ a way. Can someone explain?"
                        FontSize="20"
+                           Margin="20"
                        FontFamily="Ubuntu"                   
                        BackgroundColor="#110011"
                        TextColor="#c6c6c6"/>
                     <Button Text="Reply"
                             HorizontalOptions="End"
+                            Margin="20"
                             TextColor="#c6c6c6"
                             BackgroundColor="#933fd6"/>
                 </Grid>

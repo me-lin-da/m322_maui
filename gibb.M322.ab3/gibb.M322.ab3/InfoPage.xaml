@@ -66,7 +66,11 @@
                        Detail="This app is designed to rate and review shows. Its purpose is to allow you to decide faster which show you want to watch."
                        ImageSource="circle.png"
                                        Height="60"/>
-                        </TableSection>
+                        <ImageCell Text="2. Responsive design"
+                                       TextColor="#c6c6c6"
+                       Detail="To enjoy the app the most you should not use Follbild. We are still working on the design of the responsive.  "
+                       ImageSource="circle.png"/>
+                    </TableSection>
                     </TableRoot>
                 </TableView>
 
