@@ -36,11 +36,11 @@ public partial class FAQPage : ContentPage
     }
     async void OnAlertYesNoClicked(object sender, EventArgs e)
     {
-        bool accept = await DisplayAlert("Thank you for your review", "Your review will be checked and posted within the next 24h", "Ok", "Cancel");
+        bool accept = await DisplayAlert("Thank you for submitting a Question", "Your question will be checked and posted within the next 24h", "Ok", "Cancel");
         if (accept == true)
         {
-            Application.Current.MainPage.Navigation.PushModalAsync(new RatingPage(), true);
-            Routing.RegisterRoute(nameof(RatingPage), typeof(RatingPage));
+            Application.Current.MainPage.Navigation.PushModalAsync(new FAQPage(), true);
+            Routing.RegisterRoute(nameof(FAQPage), typeof(FAQPage));
         }
 
     }

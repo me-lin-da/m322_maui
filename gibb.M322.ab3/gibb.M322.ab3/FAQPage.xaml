@@ -25,7 +25,7 @@
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
-                            <Entry
+                            <Entry 
                                 BackgroundColor="#110011"
                                  FontFamily="Ubuntu"
                                  TextColor="#c6c6c6"
@@ -48,7 +48,30 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
-            <Entry x:Name="entry"
+            <Grid>
+                <Image Source="fy.png"
+                       HorizontalOptions="Start"
+                       HeightRequest="60"
+                       VerticalOptions="Start"/>
+                <Grid BackgroundColor="#110011"
+                      Margin="60,0,0,0">
+                    <Label Text="I'm a bit confused on why the posts arent poster righ a way. Can someone explain?"
+                       FontSize="20"
+                       FontFamily="Ubuntu"                   
+                       BackgroundColor="#110011"
+                       TextColor="#c6c6c6"/>
+                    <Button Text="Reply"
+                            HorizontalOptions="End"
+                            TextColor="#c6c6c6"
+                            BackgroundColor="#933fd6"/>
+                </Grid>
+            </Grid>
+            <Grid>
+                <Image Source="fy.png"
+                       HorizontalOptions="Start"
+                       HeightRequest="60"
+                       VerticalOptions="Start"/>
+                <Entry x:Name="entry"
                    FontFamily="Ubuntu"                   
                    BackgroundColor="#110011"
                    TextColor="#c6c6c6"
@@ -57,6 +80,7 @@
                     Placeholder="Enter review"
                     TextChanged="OnEntryTextChanged"
                     Completed="OnEntryCompleted" />
+            </Grid>
             <Button Text="add review"
                     TextColor="#c6c6c6"
                     FontFamily="Ubuntu"
