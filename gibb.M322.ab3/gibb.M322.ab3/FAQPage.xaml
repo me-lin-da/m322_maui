@@ -25,7 +25,7 @@
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
-                            <Entry x:Name="entry"
+                            <Entry
                                 BackgroundColor="#110011"
                                  FontFamily="Ubuntu"
                                  TextColor="#c6c6c6"
@@ -48,6 +48,21 @@
                     </StackLayout>
                 </ListView.Header>
             </ListView>
+            <Entry x:Name="entry"
+                   FontFamily="Ubuntu"                   
+                   BackgroundColor="#110011"
+                   TextColor="#c6c6c6"
+                   Margin="60,0,0,0"
+                   HeightRequest="150"
+                    Placeholder="Enter review"
+                    TextChanged="OnEntryTextChanged"
+                    Completed="OnEntryCompleted" />
+            <Button Text="add review"
+                    TextColor="#c6c6c6"
+                    FontFamily="Ubuntu"
+                    HorizontalOptions="Center"
+                    Clicked="OnAlertYesNoClicked"
+                    BackgroundColor="#933fd6"/>
             <ListView
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">

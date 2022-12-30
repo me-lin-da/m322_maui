@@ -34,4 +34,14 @@ public partial class FAQPage : ContentPage
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
 
     }
+    async void OnAlertYesNoClicked(object sender, EventArgs e)
+    {
+        bool accept = await DisplayAlert("Thank you for your review", "Your review will be checked and posted within the next 24h", "Ok", "Cancel");
+        if (accept == true)
+        {
+            Application.Current.MainPage.Navigation.PushModalAsync(new RatingPage(), true);
+            Routing.RegisterRoute(nameof(RatingPage), typeof(RatingPage));
+        }
+
+    }
 }
