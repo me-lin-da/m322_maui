@@ -48,7 +48,13 @@ public partial class RatingPage : ContentPage
     {
         double value = args.NewValue;
         slider.Value = value;
-        displayLabel.Text = String.Format("The Slider value is {0}", value);
+        displayLabel.Text = String.Format("You rated this show a {0}", value);
+    }
+    private void OnInfoClicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new InfoPage(), true);
+        Routing.RegisterRoute(nameof(InfoPage), typeof(InfoPage));
+
     }
 
 }

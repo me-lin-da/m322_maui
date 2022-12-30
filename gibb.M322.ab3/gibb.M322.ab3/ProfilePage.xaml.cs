@@ -24,5 +24,10 @@ public partial class NewPage1 : ContentPage
         string text = ((Entry)sender).Text;
     }
 
+    private void OnInfoClicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new InfoPage(), true);
+        Routing.RegisterRoute(nameof(InfoPage), typeof(InfoPage));
 
+    }
 }

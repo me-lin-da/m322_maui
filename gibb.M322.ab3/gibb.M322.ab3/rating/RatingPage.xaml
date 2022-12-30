@@ -128,11 +128,19 @@
                 BackgroundColor="#110011"
                 MaximumHeightRequest="150">
                 <ListView.Header>
+                    <Grid>
+                        <Button Text="ⓘ"
+                                TextColor="#933fd6"
+                                FontSize="30"
+                                Clicked="OnInfoClicked"
+                                BackgroundColor="#110011"
+                                HorizontalOptions="End"/>
                     <Image Source="logo.png"
                            HeightRequest="50"
                            HorizontalOptions="Start"
                            VerticalOptions="Center"
                            Margin="20"/>
+                    </Grid>
                 </ListView.Header>
             </ListView>
         </VerticalStackLayout>
