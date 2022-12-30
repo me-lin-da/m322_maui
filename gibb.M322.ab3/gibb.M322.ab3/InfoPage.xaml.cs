@@ -28,4 +28,10 @@ public partial class InfoPage : ContentPage
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
 
     }
+    private void OnFAQClick(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new FAQPage(), true);
+        Routing.RegisterRoute(nameof(FAQPage), typeof(FAQPage));
+
+    }
 }
