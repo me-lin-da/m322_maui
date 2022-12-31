@@ -67,20 +67,22 @@
                    FontFamily="Ubuntu"
                    FontSize="17"
                    HorizontalOptions="Center"/>
-            <Switch IsToggled="false"
+            <Switch x:Name="switch"
+                    IsToggled="false"
                         HorizontalOptions="End"
                         ThumbColor="#c893f2"
                         OnColor="#933fd6"/>
             </Grid>
             <Grid>
-                <Label Text="I'm ok that everyone will be able to see my reviews: "
+                <Label Text="My reviews will be public and everyone can see them: "
                    TextColor="#c6c6c6"
                    FontFamily="Ubuntu"
                    FontSize="17"
                    HorizontalOptions="Center"/>
                 <CheckBox IsChecked="true" 
+                          Margin="0,0,100,0"
                           HorizontalOptions="End"
-                          BackgroundColor="#933fd6"/>
+                          Color="#933fd6"/>
             </Grid>
       
 

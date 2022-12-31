@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace gibb.M322.ab3;
 
 public partial class NewPage1 : ContentPage
@@ -30,4 +32,5 @@ public partial class NewPage1 : ContentPage
         Routing.RegisterRoute(nameof(InfoPage), typeof(InfoPage));
 
     }
+
 }
