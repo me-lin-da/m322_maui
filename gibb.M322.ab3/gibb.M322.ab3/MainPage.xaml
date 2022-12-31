@@ -60,10 +60,12 @@
                    HorizontalOptions="Start"
                    VerticalOptions="Start"/>
             <ImageButton Source="naruto.jpg"
+                   Clicked="ToNaruto"
                    MaximumHeightRequest="400"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"/>
             <ImageButton Source="saiki.png"
+                   Clicked="ToSaiki"
                    MaximumHeightRequest="400"
                    HorizontalOptions="End"
                    VerticalOptions="Start"/>

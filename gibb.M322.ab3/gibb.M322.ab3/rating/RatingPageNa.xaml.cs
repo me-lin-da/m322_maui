@@ -1,16 +1,12 @@
-using System.Diagnostics;
+namespace gibb.M322.ab3.rating;
 
-namespace gibb.M322.ab3;
-
-public partial class RatingPage : ContentPage
+public partial class RatingPageNa : ContentPage
 {
-    public RatingPage()
-    {
-        InitializeComponent();
-
-    }
-
-    private void OnSettingsButtonClicked(object sender, EventArgs e)
+	public RatingPageNa()
+	{
+		InitializeComponent();
+	}
+	    private void OnSettingsButtonClicked(object sender, EventArgs e)
     {
         Application.Current.MainPage.Navigation.PushModalAsync(new MainPage(), true);
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
@@ -35,11 +31,10 @@ public partial class RatingPage : ContentPage
     async void OnAlertYesNoClicked(object sender, EventArgs e)
     {
         bool accept = await DisplayAlert("Thank you for your review", "Your review will be checked and posted within the next 24h", "Ok","Cancel");
-        Debug.WriteLine("Answer: " + accept);
         if(accept == true)
         {
-            Application.Current.MainPage.Navigation.PushModalAsync(new RatingPage(), true);
-            Routing.RegisterRoute(nameof(RatingPage), typeof(RatingPage));
+            Application.Current.MainPage.Navigation.PushModalAsync(new RatingPageNa(), true);
+            Routing.RegisterRoute(nameof(RatingPageNa), typeof(RatingPageNa));
         }
         
     }
@@ -55,5 +50,4 @@ public partial class RatingPage : ContentPage
         Routing.RegisterRoute(nameof(InfoPage), typeof(InfoPage));
 
     }
-
 }

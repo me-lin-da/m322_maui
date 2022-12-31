@@ -1,15 +1,13 @@
 using System.Diagnostics;
 
-namespace gibb.M322.ab3;
+namespace gibb.M322.ab3.rating;
 
-public partial class RatingPage : ContentPage
+public partial class RatingPageSa : ContentPage
 {
-    public RatingPage()
-    {
-        InitializeComponent();
-
-    }
-
+	public RatingPageSa()
+	{
+		InitializeComponent();
+	}
     private void OnSettingsButtonClicked(object sender, EventArgs e)
     {
         Application.Current.MainPage.Navigation.PushModalAsync(new MainPage(), true);
@@ -34,14 +32,14 @@ public partial class RatingPage : ContentPage
     }
     async void OnAlertYesNoClicked(object sender, EventArgs e)
     {
-        bool accept = await DisplayAlert("Thank you for your review", "Your review will be checked and posted within the next 24h", "Ok","Cancel");
+        bool accept = await DisplayAlert("Thank you for your review", "Your review will be checked and posted within the next 24h", "Ok", "Cancel");
         Debug.WriteLine("Answer: " + accept);
-        if(accept == true)
+        if (accept == true)
         {
-            Application.Current.MainPage.Navigation.PushModalAsync(new RatingPage(), true);
-            Routing.RegisterRoute(nameof(RatingPage), typeof(RatingPage));
+            Application.Current.MainPage.Navigation.PushModalAsync(new RatingPageSa(), true);
+            Routing.RegisterRoute(nameof(RatingPageSa), typeof(RatingPageSa));
         }
-        
+
     }
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
     {
@@ -55,5 +53,4 @@ public partial class RatingPage : ContentPage
         Routing.RegisterRoute(nameof(InfoPage), typeof(InfoPage));
 
     }
-
 }

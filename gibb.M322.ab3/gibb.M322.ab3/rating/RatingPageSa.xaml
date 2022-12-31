@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gibb.M322.ab3.rating.RatingPageSa"
+             Title="RatingPageSa">
+    <ScrollView
+             BackgroundColor="#383138">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="CenterAndExpand">
+            <ListView
+                BackgroundColor="#110011"
+                MaximumHeightRequest="150">
+                <ListView.Header>
+                    <StackLayout HeightRequest="80"
+                                 VerticalOptions="Center">
+                        <Grid
+                          VerticalOptions="Center">
+                            <ImageButton Source="fy.png"
+                           Clicked="OnSettingsToProfile"                                         
+                           HeightRequest="60"
+                           HorizontalOptions="End"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="20"/>
+                            <Entry BackgroundColor="#110011"
+                                 FontFamily="Ubuntu"                                   
+                                 TextColor="#c6c6c6"
+                                 Placeholder="Search for a show..."
+                                 TextChanged="OnEntryTextChanged"
+                                 Completed="OnEntryCompleted" 
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                            <Button
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            FontFamily="Ubuntu"
+                            Clicked="OnSettingsButtonClicked"
+                            Margin="20"
+                            TextColor="#c6c6c6"
+                            BackgroundColor="#110011"
+                            Text="←"
+                            />
+                        </Grid>
+                    </StackLayout>
+                </ListView.Header>
+            </ListView>
+            <Label Text="The Disastrous Life of Saiki K."
+                   TextColor="#c893f2"
+                   FontFamily="Ubuntu"
+                   FontSize="40"
+                   HorizontalOptions="Center"/>
+            <Grid>
+                <Image Source="saiki.png" 
+                   MaximumHeightRequest="400"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+                <Label HorizontalOptions="Center"
+                       FontFamily="Ubuntu"                       
+                       Margin="300,0,0,0"
+                       TextColor="#c6c6c6"
+                       FontSize="17"
+                       Text="To the average person, psychic abilities might seem a blessing; for Kusuo Saiki, however, this could not be further from the truth. Gifted with a wide assortment of supernatural abilities ranging from telepathy to x-ray vision, he finds this so-called blessing to be nothing but a curse. As all the inconveniences his powers cause constantly pile up, all Kusuo aims for is an ordinary, hassle-free life—a life where ignorance is bliss. Unfortunately, the life of a psychic is far from quiet. Though Kusuo tries to stay out of the spotlight by keeping his powers a secret from his classmates, he ends up inadvertently attracting the attention of many odd characters, such as the empty-headed Riki Nendou and the delusional Shun Kaidou. Forced to deal with the craziness of the people around him, Kusuo comes to learn that the ordinary life he has been striving for is a lot more difficult to achieve than expected.">
+                </Label>
+            </Grid>
+            <Grid>
+                <Grid HorizontalOptions="End">
+                    <Label Text="Date you finished the show:"
+                           TextColor="#c6c6c6"
+                           FontFamily="Ubuntu"
+                           FontSize="17"
+                           VerticalOptions="Start"/>
+                    <DatePicker MinimumDate="{Binding MinDate}"
+                            MaximumDate="{Binding MaxDate}"
+                            Date="{Binding SelectedDate}" 
+                            HorizontalOptions="Center"
+                            TextColor="#c6c6c6"
+                            FontFamily="Ubuntu"
+                            VerticalOptions="End"/>
+                </Grid>
+                <Picker x:Name="watchPicker"
+                    FontFamily="Ubuntu"
+                        HorizontalOptions="Center"
+                        FontSize="17"
+                    TextColor="#c6c6c6"
+        Title="Your watching status:">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Plan to watch</x:String>
+                            <x:String>Watching</x:String>
+                            <x:String>Completed</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label x:Name="displayLabel"
+               Text="(your rating:)"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+                <Slider x:Name="slider"
+                        Margin="0,0,800,0"
+                        VerticalOptions="End"
+                    Maximum="10"
+                    Minimum="1"
+                    ValueChanged="OnSliderValueChanged" />
+            </Grid>
+            <Grid>
+                <Image Source="fy.png"
+                       HorizontalOptions="Start"
+                       HeightRequest="60"
+                       VerticalOptions="Start"/>
+                <Entry x:Name="entry"
+                   FontFamily="Ubuntu"                   
+                   BackgroundColor="#110011"
+                   TextColor="#c6c6c6"
+                   Margin="60,0,0,0"
+                   HeightRequest="150"
+                    Placeholder="Enter review"
+                    TextChanged="OnEntryTextChanged"
+                    Completed="OnEntryCompleted" />
+            </Grid>
+            <Button Text="add review"
+                    TextColor="#c6c6c6"
+                    FontFamily="Ubuntu"
+                    HorizontalOptions="Center"
+                    Clicked="OnAlertYesNoClicked"
+                    BackgroundColor="#933fd6"/>
+            <ListView
+                BackgroundColor="#110011"
+                MaximumHeightRequest="150">
+                <ListView.Header>
+                    <Grid>
+                        <Button Text="ⓘ"
+                                TextColor="#933fd6"
+                                FontSize="30"
+                                Clicked="OnInfoClicked"
+                                BackgroundColor="#110011"
+                                HorizontalOptions="End"/>
+                        <Image Source="logo.png"
+                           HeightRequest="50"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="20"/>
+                    </Grid>
+                </ListView.Header>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

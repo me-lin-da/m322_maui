@@ -1,4 +1,6 @@
-﻿namespace gibb.M322.ab3;
+﻿using gibb.M322.ab3.rating;
+
+namespace gibb.M322.ab3;
 
 public partial class MainPage : ContentPage
 {
@@ -38,6 +40,17 @@ public partial class MainPage : ContentPage
         Routing.RegisterRoute(nameof(InfoPage), typeof(InfoPage));
 
     }
+    private void ToNaruto(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new RatingPageNa(), true);
+        Routing.RegisterRoute(nameof(RatingPageNa), typeof(RatingPageNa));
 
+    }
+    private void ToSaiki(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushModalAsync(new RatingPageSa(), true);
+        Routing.RegisterRoute(nameof(RatingPageSa), typeof(RatingPageSa));
+
+    }
 }
 

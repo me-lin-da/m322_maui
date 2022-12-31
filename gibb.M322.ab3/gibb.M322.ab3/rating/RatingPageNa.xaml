@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gibb.M322.ab3.rating.RatingPageNa"
+             Title="RatingPageNa">
+    <ScrollView
+             BackgroundColor="#383138">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="CenterAndExpand">
+            <ListView
+                BackgroundColor="#110011"
+                MaximumHeightRequest="150">
+                <ListView.Header>
+                    <StackLayout HeightRequest="80"
+                                 VerticalOptions="Center">
+                        <Grid
+                          VerticalOptions="Center">
+                            <ImageButton Source="fy.png"
+                           Clicked="OnSettingsToProfile"                                         
+                           HeightRequest="60"
+                           HorizontalOptions="End"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="20"/>
+                            <Entry BackgroundColor="#110011"
+                                 FontFamily="Ubuntu"                                   
+                                 TextColor="#c6c6c6"
+                                 Placeholder="Search for a show..."
+                                 TextChanged="OnEntryTextChanged"
+                                 Completed="OnEntryCompleted" 
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                            <Button
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            FontFamily="Ubuntu"
+                            Clicked="OnSettingsButtonClicked"
+                            Margin="20"
+                            TextColor="#c6c6c6"
+                            BackgroundColor="#110011"
+                            Text="←"
+                            />
+                        </Grid>
+                    </StackLayout>
+                </ListView.Header>
+            </ListView>
+            <Label Text="Naruto"
+                   TextColor="#c893f2"
+                   FontFamily="Ubuntu"
+                   FontSize="40"
+                   HorizontalOptions="Center"/>
+            <Grid>
+                <Image Source="naruto.jpg" 
+                   MaximumHeightRequest="400"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+                <Label HorizontalOptions="Center"
+                       FontFamily="Ubuntu"                       
+                       Margin="300,0,0,0"
+                       TextColor="#c6c6c6"
+                       FontSize="17"
+                       Text="Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto. Now, Naruto is a hyperactive and knuckle-headed ninja still living in Konohagakure. Shunned because of the Kyuubi inside him, Naruto struggles to find his place in the village, while his burning desire to become the Hokage of Konohagakure leads him not only to some great new friends, but also some deadly foes. ">
+                </Label>
+            </Grid>
+            <Grid>
+                <Grid HorizontalOptions="End">
+                    <Label Text="Date you finished the show:"
+                           TextColor="#c6c6c6"
+                           FontFamily="Ubuntu"
+                           FontSize="17"
+                           VerticalOptions="Start"/>
+                    <DatePicker MinimumDate="{Binding MinDate}"
+                            MaximumDate="{Binding MaxDate}"
+                            Date="{Binding SelectedDate}" 
+                            HorizontalOptions="Center"
+                            TextColor="#c6c6c6"
+                            FontFamily="Ubuntu"
+                            VerticalOptions="End"/>
+                </Grid>
+                <Picker x:Name="watchPicker"
+                    FontFamily="Ubuntu"
+                        HorizontalOptions="Center"
+                        FontSize="17"
+                    TextColor="#c6c6c6"
+        Title="Your watching status:">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Plan to watch</x:String>
+                            <x:String>Watching</x:String>
+                            <x:String>Completed</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label x:Name="displayLabel"
+               Text="(your rating:)"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+                <Slider x:Name="slider"
+                        Margin="0,0,800,0"
+                        VerticalOptions="End"
+                    Maximum="10"
+                    Minimum="1"
+                    ValueChanged="OnSliderValueChanged" />
+            </Grid>
+            <Grid>
+                <Image Source="fy.png"
+                       HorizontalOptions="Start"
+                       HeightRequest="60"
+                       VerticalOptions="Start"/>
+                <Entry x:Name="entry"
+                   FontFamily="Ubuntu"                   
+                   BackgroundColor="#110011"
+                   TextColor="#c6c6c6"
+                   Margin="60,0,0,0"
+                   HeightRequest="150"
+                    Placeholder="Enter review"
+                    TextChanged="OnEntryTextChanged"
+                    Completed="OnEntryCompleted" />
+            </Grid>
+            <Button Text="add review"
+                    TextColor="#c6c6c6"
+                    FontFamily="Ubuntu"
+                    HorizontalOptions="Center"
+                    Clicked="OnAlertYesNoClicked"
+                    BackgroundColor="#933fd6"/>
+            <ListView
+                BackgroundColor="#110011"
+                MaximumHeightRequest="150">
+                <ListView.Header>
+                    <Grid>
+                        <Button Text="ⓘ"
+                                TextColor="#933fd6"
+                                FontSize="30"
+                                Clicked="OnInfoClicked"
+                                BackgroundColor="#110011"
+                                HorizontalOptions="End"/>
+                        <Image Source="logo.png"
+                           HeightRequest="50"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="20"/>
+                    </Grid>
+                </ListView.Header>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
